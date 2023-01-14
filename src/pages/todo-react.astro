@@ -1,20 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { TodoReact } from "../components/todo-react";
+import { TodoReact } from "../components/TodoReact";
+import NavBar from "../components/NavBar.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo React</title>
-  </head>
-  <body>
-    <Layout title="Todo React app">
-      TODO REACT component
-      <TodoReact client:load />
-    </Layout>
-  </body>
-</html>
+<Layout title="Todo React app">
+  <main class="layout-slot">
+    <NavBar />
+    TODO REACT component
+    <TodoReact client:load />
+  </main>
+</Layout>
